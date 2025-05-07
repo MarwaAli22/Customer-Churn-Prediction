@@ -10,12 +10,12 @@ st.title("Customer Churn Prediction")
 # Load dataset
 st.write("This simple app uses a saved naive bayes model to predict customer churn")
 
-df = pd.read_excel(r'D:\Desktop\marwa\marwa\ITI\DataMining\lab1\Project\churn_dataset.xlsx')
+df = pd.read_excel('churn_dataset.xlsx')
 st.subheader("📉Dataset review")
 st.write(df.head())
 
 # Load model
-model = joblib.load(r'D:\Desktop\marwa\marwa\ITI\DataMining\lab1\Project\naivebayesClassifier.pkl')
+model = joblib.load('naivebayesClassifier.pkl')
 
 # Sidebar 
 st.sidebar.header("Input customer features").write("Enter customer details to predict if will churn or not")
